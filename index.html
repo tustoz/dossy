@@ -13,14 +13,18 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="icons/dossy-logo-horizontal.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-black theme:dark font-['Poppins']">
+<body class="bg-black theme:dark font-['Poppins'] overflow-x-">
     <img src="backgrounds/gradient1.svg" class="absolute z-0 top-0 left-0 animate-pulse" />
     <img src="backgrounds/gradient2.svg" class="absolute z-0 top-0 right-0 animate-pulse duration-1000" />
 
-    <nav class="relative z-20 flex flex-row max-w-6xl mx-auto justify-between items-center mt-4 pb-12 pr-4">
-        <img src="icons/dossy-white.png" class="w-32 md:w-40" />
+    <nav
+        class="relative z-20 flex flex-row max-w-6xl mx-auto justify-between items-center mt-4 md:mt-8 pb-12 px-4 lg:px-0">
+        <img src="icons/dossy-white.png" class="w-24 md:w-32" />
         <ul class="flex flex-row gap-x-7 hidden md:inline-flex">
             <li>
                 <a href="#home"
@@ -46,31 +50,67 @@
                     class="text-base text-indigo-950 dark:text-white hover:font-semibold hover:text-violet-700">Early
                     Access</a>
             </li>
+            <li>
+
+                <a href="#contact-us"
+                    class="text-base text-indigo-950 dark:text-white hover:font-semibold hover:text-violet-700">Contact
+                    Us</a>
+            </li>
         </ul>
         <div class="flex flex-row gap-x-4 hidden md:flex">
             <div class="bg-white rounded-full flex items-center px-20">
             </div>
         </div>
-        <p
-            class="text-sm dark:text-white dark:border-white font-semibold text-indigo-950 p-2 border-2 border-indigo-950 rounded-xl flex md:hidden">
-            Coming Soon
-        </p>
+        <div class="md:hidden flex items-center">
+            <button id="hamburger" class="text-indigo-950 dark:text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
     </nav>
+    <ul id="mobile-menu"
+        class="absolute z-50 top-0 right-0 h-auto w-full bg-white dark:bg-white hidden md:hidden pb-4 space-y-2">
+        <li class="text-right p-6 flex flex-row justify-end">
+            <img src='icons/x.png' id="close-menu" class="text-black w-5 h-5 font-bold" />
+        </li>
+        <li class="text-left">
+            <a href="#home" class="block px-4 py-2 dark:text-indigo-950 text-white text-md">Home</a>
+        </li>
+        <li class="text-left">
+            <a href="#features" class="block px-4 py-2 dark:text-indigo-950 text-white text-md">Features</a>
+        </li>
+        <li class="text-left">
+            <a href="#how-it-works" class="block px-4 py-2 dark:text-indigo-950 text-white text-md">How It Works</a>
+        </li>
+        <li class="text-left">
+            <a href="#integrations" class="block px-4 py-2 dark:text-indigo-950 text-white text-md">Supported Tools</a>
+        </li>
+        <li class="text-left">
+            <a href="#early-access" class="block px-4 py-2 dark:text-indigo-950 text-white text-md">Early Access</a>
+        </li>
+        <li class="text-left">
+            <a href="#contact-us" class="block px-4 py-2 dark:text-indigo-950 text-white text-md">Contact Us</a>
+        </li>
+    </ul>
 
     <section class="relative z-20 hero max-w-6xl mx-auto py-28 px-5" id="home">
         <div class="flex flex-col gap-y-10">
             <div class="flex flex-col gap-y-4 py-12 md:py-0 text-center">
                 <div class="flex flex-col-reverse md:flex-row justify-center items-center space-x-4">
-                    <h1
-                        class="text-indigo-950 dark:text-white font-['Poppins'] text-3xl md:text-6xl font-bold leading-none">
+                    <h1 class="text-indigo-950 dark:text-white font-['Poppins'] text-3xl md:text-6xl font-bold leading-none"
+                        data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="500">
                         Your Relationship Hub
                     </h1>
-                    <p
-                        class="text-sm dark:text-white dark:border-white font-semibold text-indigo-950 p-2 border-2 border-indigo-950 rounded-xl hidden md:flex">
+                    <p class="text-sm dark:text-white dark:border-white font-semibold text-indigo-950 p-2 border-2 border-indigo-950 rounded-xl hidden md:flex"
+                        data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="500">
                         Coming Soon
                     </p>
                 </div>
-                <p class="text-sm dark:text-white lg:text-2xl leading-loose text-gray-500 hidden md:block">
+                <p class="text-sm dark:text-white lg:text-2xl leading-loose text-gray-500 hidden md:block"
+                    data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="500">
                     Manage, track, and update all your personal and professional<br />relationships automatically.
                 </p>
                 <p class="text-sm dark:text-white lg:text-2xl leading-loose text-gray-500 flex md:hidden">
@@ -84,9 +124,9 @@
                         Join Our Waitlist
                     </a>
                     <a href="#early-access"
-                    class="w-2/3 lg:w-fit text-md hover:bg-indigo-950 bg-violet-700 text-white py-4 rounded-md font-semibold px-8 block md:hidden">
-                    Join Our Waitlist
-                </a>
+                        class="w-2/3 lg:w-fit text-md hover:bg-indigo-950 bg-violet-700 text-white py-4 rounded-md font-semibold px-8 block md:hidden">
+                        Join Our Waitlist
+                    </a>
                 </div>
             </div>
 
@@ -95,10 +135,13 @@
 
     <img src="backgrounds/gradient3.svg" class="absolute z-0 top-30 left-0 animate-pulse duration-1000">
 
-    <section class="relative z-20 max-w-6xl mx-auto text-center mt-14 mb-12 pt-24 space-y-6" id="features">
-        <h2 class="text-indigo-950 dark:text-white font-['Poppins'] text-4xl md:text-5xl font-bold leading-none">
+    <section class="relative z-20 max-w-6xl mx-auto text-center mt-14 mb-12 pt-24 space-y-6 overflow-hidden"
+        id="features">
+        <h2 class="text-indigo-950 dark:text-white font-['Poppins'] text-4xl md:text-5xl font-bold leading-none"
+            data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="700">
             Finally.</h2>
-        <p class="leading-loose text-indigo-950 font-['Poppins'] dark:text-white text-sm md:text-base md:px-0 px-4 ">All
+        <p class="leading-loose text-indigo-950 font-['Poppins'] dark:text-white text-sm md:text-base md:px-0 px-4"
+            data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="700">All
             of your personal and professional
             connections can
             be organized,
@@ -107,8 +150,10 @@
             relationship intelligence platform that redefines how you manage relationships.</p>
         <div class="max-w-6xl mx-auto text-start py-12 space-y-12">
 
-            <div class="grid md:grid-cols-2 gap-x-24 py-20 px-4 lg:px-0">
-                <img src="images/relationship-strength.png" alt="Relationship Strength" class="w-fit hidden md:flex" />
+            <div class="grid md:grid-cols-2 gap-x-24 py-20 px-4 lg:px-0" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">
+                <img src="images/relationship-strength.png" alt="Relationship Strength"
+                    class="h-full rounded-2xl hidden md:flex" />
                 <div class="flex flex-col gap-x-4 self-center gap-y-10">
                     <p class="text-3xl md:text-4xl font-['Poppins'] dark:text-white font-bold">
                         Scale Your Social Life
@@ -132,7 +177,8 @@
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-x-24 py-24 px-4 lg:px-0">
+            <div class="grid md:grid-cols-2 gap-x-24 py-24 px-4 lg:px-0" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">
                 <div class="flex flex-col gap-x-4 self-center gap-y-10">
                     <p class="text-3xl md:text-4xl font-['Poppins'] dark:text-white font-bold">
                         Seamless Integration
@@ -161,7 +207,8 @@
                     class="w-fit rounded-2xl hidden md:flex" />
             </div>
 
-            <div class="grid md:grid-cols-2 gap-x-24 py-24 px-4 lg:px-0">
+            <div class="grid md:grid-cols-2 gap-x-24 py-24 px-4 lg:px-0" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">
                 <img src="images/interaction-detail.png" alt="Dossy Interaction Detail"
                     class="w-fit rounded-2xl hidden md:flex" />
                 <div class="flex flex-col gap-x-4 self-center gap-y-10">
@@ -188,7 +235,8 @@
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-x-24 py-24 px-4 lg:px-0">
+            <div class="grid md:grid-cols-2 gap-x-24 py-24 px-4 lg:px-0" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">
                 <div class="flex flex-col gap-x-4 self-center gap-y-10">
                     <p class="text-3xl md:text-4xl font-['Poppins'] dark:text-white font-bold">
                         Personal & Professional Harmonized
@@ -216,138 +264,263 @@
         </div>
     </section>
 
-    <section class="relative z-20 max-w-5xl mx-auto justify-center items-center py-24" id="how-it-works">
-        <h2 class="text-2xl md:text-5xl dark:text-white font-bold mb-16 text-center hidden md:block">Everything You Need
-            to Know About
-            <br />Everyone
-            You Know
-        </h2>
-        <h2 class="text-2xl md:text-5xl dark:text-white font-bold mb-12 text-center block md:hidden">Everything You Need
-            to Know About
-            Everyone
-            You Know
-        </h2>
-        <div class="flex flex-col md:flex-row w-full px-6 md:px-0">
-            <div class="grid md:grid-cols-3 gap-x-6 gap-y-6 md:gap-y-0">
-                <div
-                    class="flex flex-col space-y-3 border border-white rounded-2xl p-6 shadow hover:shadow-white hover:shadow-lg">
-                    <p class="text-2xl md:text-xl font-bold dark:text-white">Centralize your network</p>
-                    <p class="text-md dark:text-white">Bring together contacts from email, social media,
-                        messaging apps, and more.</p>
-                </div>
-                <div
-                    class="flex flex-col space-y-3 border border-white rounded-2xl p-6 shadow hover:shadow-white hover:shadow-lg">
-                    <p class="text-2xl font-bold dark:text-white">Relationship timeline</p>
-                    <p class="text-md dark:text-white">Visualize your history<br />with each contact at a glance.</p>
-                </div>
-                <div
-                    class="flex flex-col space-y-3 border border-white rounded-2xl p-6 shadow hover:shadow-white hover:shadow-lg">
-                    <p class="text-2xl font-bold dark:text-white">Smart reminders</p>
-                    <p class="text-md dark:text-white">Never miss an important follow-up or birthday again.</p>
+    <section class="relative z-20 py-24 overflow-hidden" id="how-it-works">
+        <img src="images/placeholder2.png" class="w-screen h-[800px] md:h-[500px] object-cover object-center" 
+            alt="background image" data-aos="fade" data-aos-easing="linear" data-aos-duration="700" />
+        <div class="absolute inset-0 flex flex-col justify-center items-center max-w-5xl mx-auto text-white">
+            <h2 class="text-2xl md:text-5xl dark:text-white font-bold mb-16 text-center hidden md:block"
+                data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800">Everything You Need
+                to Know About
+                <br />Everyone
+                You Know
+            </h2>
+            <h2 class="text-2xl md:text-5xl dark:text-white font-bold mb-12 text-center block md:hidden"
+                data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800">Everything You Need
+                to Know About
+                Everyone
+                You Know
+            </h2>
+            <div class="flex flex-col md:flex-row w-full px-6 md:px-0">
+                <div class="grid md:grid-cols-3 gap-x-6 gap-y-6 md:gap-y-0">
+                    <div class="flex flex-col space-y-3 border border-white rounded-2xl p-6 shadow hover:shadow-white hover:shadow-lg"
+                        data-aos="fade-up-right" data-aos-easing="ease-in-out" data-aos-duration="700">
+                        <p class="text-2xl md:text-xl font-bold dark:text-white">Centralize your network</p>
+                        <p class="text-md dark:text-white">Bring together contacts from email, social media,
+                            messaging apps, and more.</p>
+                    </div>
+                    <div class="flex flex-col space-y-3 border border-white rounded-2xl p-6 shadow hover:shadow-white hover:shadow-lg"
+                        data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="700">
+                        <p class="text-2xl font-bold dark:text-white">Relationship timeline</p>
+                        <p class="text-md dark:text-white">Visualize your history<br />with each contact at a glance.
+                        </p>
+                    </div>
+                    <div class="flex flex-col space-y-3 border border-white rounded-2xl p-6 shadow hover:shadow-white hover:shadow-lg"
+                        data-aos="fade-up-left" data-aos-easing="ease-in-out" data-aos-duration="700">
+                        <p class="text-2xl font-bold dark:text-white">Smart reminders</p>
+                        <p class="text-md dark:text-white">Never miss an important follow-up or birthday again.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-
     <section class="relative z-20 max-w-5xl mx-auto justify-center items-center py-24" id="integrations">
-        <h2 class="text-2xl md:text-5xl dark:text-white font-bold mb-16 text-center">Integrate with the tools you
+        <h2 class="text-2xl md:text-5xl dark:text-white font-bold mb-16 text-center" data-aos="fade-up"
+            data-aos-easing="ease-in-out" data-aos-duration="700">Integrate with the tools you
             already use
         </h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 px-4 md:px-0">
-            <div
-                class="grid colspan-2 flex flex-row items-center space-x-3 border border-white bg-white rounded-2xl p-6">
+            <div class="flex flex-row items-center space-x-3 border border-white bg-white rounded-2xl p-6 h-24"
+                data-aos="fade" data-aos-easing="linear" data-aos-duration="700">
                 <img src="icons/office365.png" class="w-full" />
             </div>
-            <div
-                class="grid colspan-2 flex flex-row items-center space-x-3 border border-white bg-white rounded-2xl p-6">
+            <div class="flex flex-row items-center space-x-3 border border-white bg-white rounded-2xl p-6 h-24"
+                data-aos="fade" data-aos-easing="linear" data-aos-duration="700">
                 <img src="icons/salesforces.png" class="w-full scale-125" />
             </div>
-            <div
-                class="grid colspan-2 flex flex-row items-center space-x-3 border border-white bg-white rounded-2xl p-6">
+            <div class="flex flex-row items-center space-x-3 border border-white bg-white rounded-2xl p-6 h-24"
+                data-aos="fade" data-aos-easing="linear" data-aos-duration="700">
                 <img src="icons/slack.png" class="w-full scale-75" />
             </div>
-            <div
-                class="grid colspan-2 flex flex-row items-center space-x-3 border border-white bg-white rounded-2xl p-6">
+            <div class="flex flex-row items-center space-x-3 border border-white bg-white rounded-2xl p-6 h-24"
+                data-aos="fade" data-aos-easing="linear" data-aos-duration="700">
                 <img src="icons/zoom.png" class="w-full scale-75" />
             </div>
-
-            <div
-                class="flex flex-row items-center space-x-6 border border-white bg-white rounded-2xl p-6 justify-center md:justify-start">
+            <div class="flex flex-row items-center space-x-6 border border-white bg-white rounded-2xl p-6 justify-center md:justify-start h-24"
+                data-aos="fade" data-aos-easing="linear" data-aos-duration="1000">
                 <img src="icons/gcalendar.png" class="w-12 h-12 md:w-14" />
                 <p class="text-xl text-black font-semibold font-[clash_display] leading-tight hidden md:block">Google
                     Calendar</p>
             </div>
-            <div
-                class="flex flex-row items-center space-x-6 border border-white bg-white rounded-2xl p-6 justify-center md:justify-start">
+            <div class="flex flex-row items-center space-x-6 border border-white bg-white rounded-2xl p-6 justify-center md:justify-start h-24"
+                data-aos="fade" data-aos-easing="linear" data-aos-duration="1000">
                 <img src="icons/gmail.png" class="w-12 h-fit md:h-fit md:w-14" />
                 <p class="text-xl text-black font-semibold font-[clash_display] leading-tight hidden md:block">Google
                     Email</p>
             </div>
-            <div
-                class="flex flex-row items-center space-x-6 border border-white bg-white rounded-2xl p-6 justify-center md:justify-start">
+            <div class="flex flex-row items-center space-x-6 border border-white bg-white rounded-2xl p-6 justify-center md:justify-start h-24"
+                data-aos="fade" data-aos-easing="linear" data-aos-duration="1000">
                 <img src="icons/teams.png" class="w-14 h-14" />
                 <p class="text-xl text-black font-semibold font-[clash_display] leading-tight hidden md:block">
                     Microsoft<br />Teams</p>
             </div>
-
-            <div
-                class="flex flex-row items-center space-x-4 border border-white bg-white rounded-2xl p-6 justify-center md:justify-start">
+            <div class="flex flex-row items-center space-x-4 border border-white bg-white rounded-2xl p-6 justify-center md:justify-start h-24"
+                data-aos="fade" data-aos-easing="linear" data-aos-duration="1000">
                 <img src="icons/imessage.png" class="w-14" />
                 <p class="text-xl text-black font-semibold font-[clash_display] leading-tight hidden md:block">iMessage
                 </p>
             </div>
-
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 px-4 md:px-0 mt-3 md:mt-6 mx-auto w-auto">
             <div class="hidden md:block">
             </div>
-            <div
-                class="flex flex-row justify-center items-center space-x-4 border border-white bg-white rounded-2xl p-6">
+            <div class="flex flex-row justify-center items-center space-x-4 border border-white bg-white rounded-2xl p-6 h-24"
+                data-aos="fade" data-aos-easing="linear" data-aos-duration="1300">
                 <img src="icons/sms.png" class="h-14 object-fit" />
             </div>
-            <div class="flex flex-col justify-center border border-white bg-white rounded-2xl p-6">
+            <div class="flex flex-col justify-center border border-white bg-white rounded-2xl p-6 h-24" data-aos="fade"
+                data-aos-easing="linear" data-aos-duration="1300">
                 <img src="icons/gong.png" class="h-12" />
             </div>
             <div class="hidden md:block"></div>
         </div>
     </section>
 
-    <section class="relative z-20 max-w-5xl mx-auto py-24 px-4 md:px-0" id="how-it-works">
-        <h2 class="text-3xl md:text-5xl dark:text-white font-bold mb-6 text-center">Dossy combines the best of both
-            worlds</h2>
-        <div class="flex flex-col space-y-2 md:space-y text-center">
-            <p class="dark:text-white text-base md:text-lg">Intuitive social features to nurture personal connections.
-            </p>
-            <p class="dark:text-white tetx-base md:text-lg">Powerful relationship management tools for your professional
-                life.</p>
+
+    <section class="relative z-20 pt-12" id="how-it-works">
+        <img src="images/placeholder.png" class="w-screen md:h-[330px] object-cover object-top"
+            alt="background image" data-aos="fade" data-aos-easing="linear" data-aos-duration="700" />
+        <div
+            class="absolute inset-0 flex flex-col justify-center items-center max-w-5xl mx-auto px-4 md:px-0 text-white">
+            <h2 class="text-3xl md:text-5xl font-bold my-6 md:mb-6 text-center" data-aos="fade-up"
+                data-aos-easing="ease-in-out" data-aos-duration="700">Dossy combines the best of both worlds</h2>
+            <div class="flex flex-col space-y-2 md:space-y text-center">
+                <p class="text-base md:text-lg" data-aos="fade-up" data-aos-easing="ease-in-out"
+                    data-aos-duration="900">Intuitive social features to nurture personal connections.</p>
+                <p class="text-base md:text-lg" data-aos="fade-up" data-aos-easing="ease-in-out"
+                    data-aos-duration="1200">Powerful relationship management tools for your professional life.</p>
+            </div>
         </div>
     </section>
-    <img src="icons/discover-cover.svg" class="absolute z-0 bottom-0 left-0 right-0 w-full">
 
-    <section class="relative z-100 max-w-5xl mx-auto py-24 px-4 md:px-0" id="early-access">
-        <h2 class="text-3xl md:text-5xl dark:text-white font-bold mb-4 text-center">Launching Soon: Be the First to Know
+    <img src="icons/discover-cover.svg" class="absolute z-0 bottom-0 left-0 md:right-0 md:w-full animate-pulse">
+
+    <section class="relative z-20 max-w-5xl mx-auto py-24 md:py-40 px-4 md:px-0" id="early-access">
+        <h2 class="text-3xl md:text-5xl dark:text-white font-bold mb-4 text-center" data-aos="fade-up"
+            data-aos-easing="ease-in-out" data-aos-duration="800">Launching Soon: Be the First to Know
         </h2>
         <div class="flex flex-col space-y text-center">
-            <p class="dark:text-white text-base md:text-lg">Join our waitlist to get early access and updates ahead of
+            <p class="dark:text-white text-base md:text-lg" data-aos="fade-up" data-aos-easing="ease-in-out"
+                data-aos-duration="800">Join our waitlist to get early access and updates ahead of
                 Dossy's
                 launch.<br />Enter your email below to stay in the loop!</p>
             <div
                 class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 mt-12">
                 <input type="text" placeholder="Work email"
-                    class="w-full md:w-1/3 p-3 text-lg border border-gray-300 rounded-md outline-none focus:border-gray-400 placeholder-gray-500">
+                    class="w-full md:w-1/3 p-3 text-lg border border-gray-300 rounded-md outline-none focus:border-gray-400 placeholder-gray-500"
+                    data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="700">
                 <a href="#"
-                    class="w-full lg:w-fit text-md hover:bg-indigo-950 bg-violet-700 text-white py-4 rounded-md font-semibold px-8">
+                    class="w-full lg:w-fit text-md hover:bg-indigo-950 bg-violet-700 text-white py-4 rounded-md font-semibold px-8"
+                    data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="700">
                     Sign Up for Early Access
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="relative z-50 text-center py-6 px-4 md:px-0">
-        <p class="text-gray-600 dark:text-white text-sm md:text-base">Join the future of relationship management with Dossy. Coming soon!
-        </p>
-    </footer>
+    <section class="footer relative z-20" id="contact-us" data-aos="fade" data-aos-easing="linear"
+        data-aos-duration="700">
+        <div class="w-full md:max-w-7xl py-20 mx-auto grid md:grid-cols-5 md:gap-x-10 px-4 space-y-6 lg:space-y-0">
+            <div class="company flex flex-col md:col-span-2 gap-y">
+                <img src="icons/dossy-white.png" class="h-10 w-fit" />
+                <p class="text-gray-600 dark:text-white text-sm md:text-base mt-3">Join the future of relationship
+                    management<br />with
+                    Dossy. Coming soon!
+                </p>
+            </div>
+
+            <div class="sitemap flex flex-col gap-y-3 md:gap-y-7">
+                <h1 class="text-xl font-bold text-white">Resources</h1>
+                <ul class="flex flex-col gap-y-2 md:gap-y-3">
+                    <li>
+                        <a href="#" class="text-base text-gray-500 hover:text-violet-700">Help Center</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-base text-gray-500 hover:text-violet-700">Platform Status</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-base text-gray-500 hover:text-violet-700">Partners</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-base text-gray-500 hover:text-violet-700">Careers</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-base text-gray-500 hover:text-violet-700">Blog</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sitemap flex flex-col gap-y-3 md:gap-y-7">
+                <h1 class="text-xl font-bold text-white">Company</h1>
+                <ul class="flex flex-col gap-y-2 md:gap-y-3">
+                    <li>
+                        <a href="#" class="text-base text-gray-500 hover:text-violet-700">Our Team</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-base text-gray-500 hover:text-violet-700">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-base text-gray-500 hover:text-violet-700">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-base text-gray-500 hover:text-violet-700">Career</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sitemap flex flex-col gap-y-3 md:gap-y-7">
+                <h1 class="text-xl font-bold text-white">Contact</h1>
+                <ul class="flex flex-col gap-y-2 md:gap-y-3">
+                    <li class="text-base text-gray-500">
+                        Kemayoran<br />
+                        DKI Jakarta 10610<br />
+                        Indonesia
+                    </li>
+                </ul>
+                <div class="flex flex-row gap-x-4 mt-4 md:mt-0">
+                    <a href="#facebooklink">
+                        <img src="icons/facebook.svg" alt="facebook" />
+                    </a>
+                    <a href="#twitterlink">
+                        <img src="icons/twitter.svg" alt="twitter" />
+                    </a>
+                    <a href="#instagramlink">
+                        <img src="icons/instagram.svg" alt="instagram" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-6 pb-7 text-center">
+            <p class="text-sm md:text-base text-black dark:text-white font-medium leading-loose">
+                All Rights Reserved 2024 • Copyright Dossy
+            </p>
+        </div>
+    </section>
+
+    <script>
+        AOS.init();
+
+        document.getElementById('hamburger').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        document.getElementById('close-menu').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        })
+
+        var menu = document.getElementById('mobile-menu');
+        const menuLinks = menu.querySelectorAll('a');
+
+        const closeMenu = () => {
+            menu.classList.remove('show');
+        };
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+    </script>
+
 </body>
 
 </html>
